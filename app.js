@@ -8,6 +8,9 @@ require('dotenv').config();
 
 app.use(cors());
 
+app.get("/", function (req, res) {
+  res.send("<h5>Gallery App</h5>");
+});
 
 const mongoURI = process.env.MONGODB_URI;
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
